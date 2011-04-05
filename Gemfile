@@ -7,6 +7,10 @@ gem 'rails', '3.0.5'
 
 gem 'sqlite3'
 
+group :test, :development do
+  gem "rspec-rails", "~> 2.4"  #Imposto l'utilizzo di rspec '
+  gem "webrat"				   #E webrat solo se l'applicazione è eseguita in modalità development o test'
+end
 # Use unicorn as the web server
 # gem 'unicorn'
 
