@@ -16,6 +16,13 @@ describe HomeController do
 				div.should contain("benvenuti")
 			end
 		end
+		
+		it "should have the right title" do
+			get :index
+			response.body.should have_selector("title") do |title|
+				title.should contain("Homepage")
+			end
+		end
 	end
 	
 end
