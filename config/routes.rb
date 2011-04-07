@@ -10,6 +10,8 @@ SistemiInformativiUnict::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
+	match 'home/' => 'home#index'
+	match 'home/:action' => 'home' 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -50,7 +52,7 @@ SistemiInformativiUnict::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
 
-	root :to => "home#index"
+ 	root :to => "home#index"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
