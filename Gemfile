@@ -6,6 +6,8 @@ gem 'rails', '3.0.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'compass'
+gem 'haml'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"  #Imposto l'utilizzo di rspec '
