@@ -8,6 +8,8 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 gem 'compass'
 gem 'haml'
+gem 'authlogic'
+gem "rails3-generators"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"  #Imposto l'utilizzo di rspec '
