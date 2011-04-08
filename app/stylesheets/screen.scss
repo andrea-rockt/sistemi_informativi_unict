@@ -16,6 +16,7 @@
 @import "blueprint/debug";
 
 @import "compass/css3/opacity";
+@import "compass/utilities/lists";
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -25,6 +26,7 @@
 // when stylesheets are concatenated together.
 @include blueprint-scaffolding("body");
 
+
 body {
   @include blueprint-typography(true);
   @include blueprint-utilities;
@@ -32,10 +34,7 @@ body {
   @include blueprint-interaction;
   
   background: {
-  	image: url('/images/background.jpg');
-  	position:center top;
-  	repeat:no-repeat;
-  	color:rgb(0,0,0);
+  	color:#f0f0f0;
   }
   
 }
@@ -46,22 +45,86 @@ body {
 	//@include opacity(0.8);
 }
 
-#grid *{
+#header_grid{
+	@include container;
+	//@include showgrid;
+	//@include opacity(0.8);
+}
+
+
+#pages_header{
+	//height:132px;
+	width:100%;
+	background-color:#202020;
+	#logo{
+		position:relative;
+		margin-left:50%;
+		left:(-($blueprint-container-size/2)) - 10px;
+		padding-top:16px;
+	}
+
+}
+
+#main_nav{
+	width:$blueprint-container-size;
+	position:relative;
+	margin-left:50%;
+	left:(-($blueprint-container-size/2));
+	font-family: Helvetica, Arial, Verdana, 'Lucida Sans', sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding-top:5px;
+	padding-bottom:18px;
+	ul{
+		@include horizontal-list;
+		li{
+			padding-right:20px;
+			a{
+				color:white;
+				text-decoration:none;
+			}
+			a:hover{
+				color: #10a73f;
+				border-bottom: 1px solid #10a73f;
+			}
+		}
+	}
 	
 }
 
-#pages_header{
-	height:150px;
-	width:100%;
-	background-color:gray;
+#breadcrumb_nav{
+	height:28px;
+	background-color:white;
+	border-bottom:1px solid #CCC;
+	ul{
+		@include horizontal-list;
+		position:relative;
+		width:$blueprint-container-size;
+		margin-left:50%;
+		left:(-($blueprint-container-size/2));
+		li{
+			
+			padding-right:20px;
+			a{
+				color:#666;
+				text-decoration:none;
+			}
+		}
+	}
+}
+#main{
+	padding-top:18px;
 }
 
-#column1{
-	@include column(14);
-	background-color:blue;
+footer{
+	height:200px;
+	padding-top:20px;
+	hr{
+		height: 6px;
+		background-color:#10a73f;	
+	}
 }
 
-#column2{
-	@include column(10,true);
-	background-color:green;
-}
+	
+
+@import 'partials/home';

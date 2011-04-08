@@ -138,16 +138,13 @@ form.inline p {
   margin-bottom: 0;
 }
 
-/* line 28, ../../../app/stylesheets/screen.scss */
+/* line 30, ../../../app/stylesheets/screen.scss */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #333333;
   font-size: 75%;
-  background-image: url("/images/background.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: black;
+  background-color: #f0f0f0;
 }
 /* line 65, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -450,7 +447,7 @@ body .removed {
   color: white;
 }
 
-/* line 43, ../../../app/stylesheets/screen.scss */
+/* line 42, ../../../app/stylesheets/screen.scss */
 #grid {
   width: 950px;
   margin: 0 auto;
@@ -458,35 +455,190 @@ body .removed {
   *zoom: 1;
 }
 
-/* line 53, ../../../app/stylesheets/screen.scss */
-#pages_header {
-  height: 150px;
-  width: 100%;
-  background-color: gray;
+/* line 48, ../../../app/stylesheets/screen.scss */
+#header_grid {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
 }
 
+/* line 55, ../../../app/stylesheets/screen.scss */
+#pages_header {
+  width: 100%;
+  background-color: #202020;
+}
 /* line 59, ../../../app/stylesheets/screen.scss */
+#pages_header #logo {
+  position: relative;
+  margin-left: 50%;
+  left: -485px;
+  padding-top: 16px;
+}
+
+/* line 68, ../../../app/stylesheets/screen.scss */
+#main_nav {
+  width: 950px;
+  position: relative;
+  margin-left: 50%;
+  left: -475px;
+  font-family: Helvetica, Arial, Verdana, 'Lucida Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 18px;
+}
+/* line 78, ../../../app/stylesheets/screen.scss */
+#main_nav ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 56, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#main_nav ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 45, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#main_nav ul li:first-child, #main_nav ul li.first {
+  padding-left: 0;
+}
+/* line 46, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#main_nav ul li:last-child, #main_nav ul li.last {
+  padding-right: 0;
+}
+/* line 80, ../../../app/stylesheets/screen.scss */
+#main_nav ul li {
+  padding-right: 20px;
+}
+/* line 82, ../../../app/stylesheets/screen.scss */
+#main_nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+/* line 86, ../../../app/stylesheets/screen.scss */
+#main_nav ul li a:hover {
+  color: #10a73f;
+  border-bottom: 1px solid #10a73f;
+}
+
+/* line 95, ../../../app/stylesheets/screen.scss */
+#breadcrumb_nav {
+  height: 28px;
+  background-color: white;
+  border-bottom: 1px solid #CCC;
+}
+/* line 99, ../../../app/stylesheets/screen.scss */
+#breadcrumb_nav ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+  width: 950px;
+  margin-left: 50%;
+  left: -475px;
+}
+/* line 56, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#breadcrumb_nav ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 45, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#breadcrumb_nav ul li:first-child, #breadcrumb_nav ul li.first {
+  padding-left: 0;
+}
+/* line 46, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#breadcrumb_nav ul li:last-child, #breadcrumb_nav ul li.last {
+  padding-right: 0;
+}
+/* line 105, ../../../app/stylesheets/screen.scss */
+#breadcrumb_nav ul li {
+  padding-right: 20px;
+}
+/* line 108, ../../../app/stylesheets/screen.scss */
+#breadcrumb_nav ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* line 115, ../../../app/stylesheets/screen.scss */
+#main {
+  padding-top: 18px;
+}
+
+/* line 119, ../../../app/stylesheets/screen.scss */
+footer {
+  height: 200px;
+  padding-top: 20px;
+}
+/* line 122, ../../../app/stylesheets/screen.scss */
+footer hr {
+  height: 6px;
+  background-color: #10a73f;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_home.sass */
 #column1 {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 550px;
-  background-color: blue;
+  width: 470px;
+  padding-right: 80px;
+  min-height: 500px;
+  background-color: white;
+  border: solid 1px #cccccc;
+  padding: 20px;
 }
 /* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #column1 {
   overflow-x: hidden;
 }
 
-/* line 64, ../../../app/stylesheets/screen.scss */
+/* line 9, ../../../app/stylesheets/partials/_home.sass */
 #column2 {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 390px;
-  background-color: green;
+  width: 350px;
+  min-height: 500px;
+  background-color: white;
+  border: solid 1px #cccccc;
+  padding: 20px;
 }
 /* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #column2 {
   overflow-x: hidden;
+}
+
+/* line 16, ../../../app/stylesheets/partials/_home.sass */
+#news_section > h1 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: solid 1px #10a73f;
+}
+
+/* line 22, ../../../app/stylesheets/partials/_home.sass */
+header .news > h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555555;
 }
