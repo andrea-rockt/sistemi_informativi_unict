@@ -1,4 +1,6 @@
 SistemiInformativiUnict::Application.routes.draw do
+  devise_for :users
+
   resources :news
 
   # The priority is based upon order of creation:

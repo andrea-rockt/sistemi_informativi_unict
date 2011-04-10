@@ -32,7 +32,15 @@
 			</nav>
 		</header>
 		<div id="main">
+
 			<div id="grid">
+				 <% [:info, :error,:notice,:alert].each do |key| %>
+				   <% if flash[key] %>
+				   <div class="<%= key %>" id="flash">
+				     <%= flash[key] %>
+				   </div>
+				   <% end %>
+				 <% end %>
 				<%= yield %>
 			</div>
 		</div>
