@@ -1,3 +1,5 @@
+$blueprint-font-family: Helvetica, Arial, sans-serif;
+
 // This import applies a global reset to any page that imports this stylesheet.
 @import "blueprint/reset";
 
@@ -32,6 +34,7 @@ body {
   @include blueprint-utilities;
   @include blueprint-debug;
   @include blueprint-interaction;
+
   
   background: {
   	color:#f0f0f0;
@@ -127,3 +130,4 @@ footer{
 
 
 @import 'partials/home';
+@import 'partials/user';

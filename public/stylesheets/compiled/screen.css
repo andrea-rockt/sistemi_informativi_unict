@@ -138,10 +138,10 @@ form.inline p {
   margin-bottom: 0;
 }
 
-/* line 30, ../../../app/stylesheets/screen.scss */
+/* line 32, ../../../app/stylesheets/screen.scss */
 body {
   line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: #333333;
   font-size: 75%;
   background-color: #f0f0f0;
@@ -447,7 +447,7 @@ body .removed {
   color: white;
 }
 
-/* line 42, ../../../app/stylesheets/screen.scss */
+/* line 45, ../../../app/stylesheets/screen.scss */
 #grid {
   width: 950px;
   margin: 0 auto;
@@ -455,7 +455,7 @@ body .removed {
   *zoom: 1;
 }
 
-/* line 48, ../../../app/stylesheets/screen.scss */
+/* line 51, ../../../app/stylesheets/screen.scss */
 #header_grid {
   width: 950px;
   margin: 0 auto;
@@ -463,12 +463,12 @@ body .removed {
   *zoom: 1;
 }
 
-/* line 55, ../../../app/stylesheets/screen.scss */
+/* line 58, ../../../app/stylesheets/screen.scss */
 #pages_header {
   width: 100%;
   background-color: #202020;
 }
-/* line 59, ../../../app/stylesheets/screen.scss */
+/* line 62, ../../../app/stylesheets/screen.scss */
 #pages_header #logo {
   position: relative;
   margin-left: 50%;
@@ -476,7 +476,7 @@ body .removed {
   padding-top: 16px;
 }
 
-/* line 68, ../../../app/stylesheets/screen.scss */
+/* line 71, ../../../app/stylesheets/screen.scss */
 #main_nav {
   width: 950px;
   position: relative;
@@ -488,7 +488,7 @@ body .removed {
   padding-top: 5px;
   padding-bottom: 18px;
 }
-/* line 78, ../../../app/stylesheets/screen.scss */
+/* line 81, ../../../app/stylesheets/screen.scss */
 #main_nav ul {
   margin: 0;
   padding: 0;
@@ -516,28 +516,28 @@ body .removed {
 #main_nav ul li:last-child, #main_nav ul li.last {
   padding-right: 0;
 }
-/* line 80, ../../../app/stylesheets/screen.scss */
+/* line 83, ../../../app/stylesheets/screen.scss */
 #main_nav ul li {
   padding-right: 20px;
 }
-/* line 82, ../../../app/stylesheets/screen.scss */
+/* line 85, ../../../app/stylesheets/screen.scss */
 #main_nav ul li a {
   color: white;
   text-decoration: none;
 }
-/* line 86, ../../../app/stylesheets/screen.scss */
+/* line 89, ../../../app/stylesheets/screen.scss */
 #main_nav ul li a:hover {
   color: #10a73f;
   border-bottom: 1px solid #10a73f;
 }
 
-/* line 95, ../../../app/stylesheets/screen.scss */
+/* line 98, ../../../app/stylesheets/screen.scss */
 #breadcrumb_nav {
   height: 28px;
   background-color: white;
   border-bottom: 1px solid #CCC;
 }
-/* line 99, ../../../app/stylesheets/screen.scss */
+/* line 102, ../../../app/stylesheets/screen.scss */
 #breadcrumb_nav ul {
   margin: 0;
   padding: 0;
@@ -569,27 +569,27 @@ body .removed {
 #breadcrumb_nav ul li:last-child, #breadcrumb_nav ul li.last {
   padding-right: 0;
 }
-/* line 105, ../../../app/stylesheets/screen.scss */
+/* line 108, ../../../app/stylesheets/screen.scss */
 #breadcrumb_nav ul li {
   padding-right: 20px;
 }
-/* line 108, ../../../app/stylesheets/screen.scss */
+/* line 111, ../../../app/stylesheets/screen.scss */
 #breadcrumb_nav ul li a {
   color: #666;
   text-decoration: none;
 }
 
-/* line 115, ../../../app/stylesheets/screen.scss */
+/* line 118, ../../../app/stylesheets/screen.scss */
 #main {
   padding-top: 18px;
 }
 
-/* line 119, ../../../app/stylesheets/screen.scss */
+/* line 122, ../../../app/stylesheets/screen.scss */
 footer {
   height: 200px;
   padding-top: 20px;
 }
-/* line 122, ../../../app/stylesheets/screen.scss */
+/* line 125, ../../../app/stylesheets/screen.scss */
 footer hr {
   height: 6px;
   background-color: #10a73f;
@@ -649,4 +649,23 @@ header .news > p.data {
   color: #10a73f;
   margin-top: -8px;
   font-size: 10px;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_user.sass */
+#sign_in {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+  background-color: white;
+  border: solid 1px #cccccc;
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 240px;
+  padding: 20px;
+}
+/* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #sign_in {
+  overflow-x: hidden;
 }

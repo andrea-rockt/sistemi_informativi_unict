@@ -197,3 +197,8 @@ it:
   	index:
   		title: "SnowCentral | Homepage"
   		news_header: "News"
+  		
+  #devise internationalization  		
+  users:
+  	sign_in:
+  		sign_in_title: "Perfavore effettua il login"
