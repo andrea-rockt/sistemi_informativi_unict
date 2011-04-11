@@ -8,12 +8,31 @@
 		<%= csrf_meta_tag %>
 	</head>
 	<body>
+		<div id="flashes">
+
+				<% [:info, :error,:notice,:alert].each do |key| %>
+				   <% if flash[key] %>
+				   <div class="<%= key %>" id="flash">
+				     <%= flash[key] %>
+				    <div id="close_flash"></div>
+				   </div>
+				   <% end %>
+				 <% end %>
+		</div>
+
 		<header id="pages_header">
+					<div id="session_info">
+			<% unless current_user%>
+					<a href="<%= new_user_session_path%>"> LOGIN </a>
+			<% else%>
+					<a href="#"><%=current_user.email%> - </a><a href="/users/sign_out">signout</a></p>
+			<% end%>
+		</div>
 			<img id="logo" src="/images/logo.png"/>
 			<nav id="main_nav">
 				<ul>
 					<li>
-						<a href="#">HOME</a>
+						<a href="<%= root_path %>">HOME</a>
 					</li>
 					<li>
 						<a href="#">PRODOTTI</a>
@@ -34,13 +53,6 @@
 		<div id="main">
 
 			<div id="grid">
-				 <% [:info, :error,:notice,:alert].each do |key| %>
-				   <% if flash[key] %>
-				   <div class="<%= key %>" id="flash">
-				     <%= flash[key] %>
-				   </div>
-				   <% end %>
-				 <% end %>
 				<%= yield %>
 			</div>
 		</div>

@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'compass'
 gem 'haml'
 gem 'devise'
+gem 'paperclip'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"  #Imposto l'utilizzo di rspec '

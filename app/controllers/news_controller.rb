@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :require_admin!, :only => :edit
   # GET /news
   # GET /news.xml
   def index

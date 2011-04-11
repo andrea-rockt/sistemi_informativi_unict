@@ -10,7 +10,7 @@ $blueprint-font-family: Helvetica, Arial, sans-serif;
 @import "blueprint";
 
 // Import the non-default scaffolding module.
-@import "blueprint/scaffolding";
+//@import "blueprint/scaffolding";
 
 //Import the grid module
 
@@ -19,6 +19,7 @@ $blueprint-font-family: Helvetica, Arial, sans-serif;
 
 @import "compass/css3/opacity";
 @import "compass/utilities/lists";
+@import "blueprint/form";
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -26,7 +27,7 @@ $blueprint-font-family: Helvetica, Arial, sans-serif;
 // But Compass recommends that you scope your blueprint styles
 // So that you can better control what pages use blueprint
 // when stylesheets are concatenated together.
-@include blueprint-scaffolding("body");
+//@include blueprint-scaffolding("body");
 
 
 body {
@@ -128,6 +129,62 @@ footer{
 	}
 }
 
+#flashes{
+	.alert{
+		background-color:#FF4040;
+		padding-top:10px;
+		height:30px;
+		width:100%;
+		text-align:center;
+		border: solid 3px red;
+	}
+	.notice{
+		padding:0px;
+		padding-top:10px;
+	
+		height:30px;
+		width:100%;
+		text-align:center;
+		border: solid 3px #ffea68;
+		margin:0px;
+	}
+}
 
+#close_flash{
+	content:"x";
+	width:20px;
+	height:20px;
+	float:right;
+	margin-top:-16px;
+	margin-right:20px;
+}
+
+#close_flash:after{
+	content:"x";
+	font-size:30px;
+}
+#close_flash:hover:after{
+	text-decoration: underline;
+}
+
+
+#session_info{
+	//background-color:white;
+	//padding-right:20px;
+	width:400px;
+	left:$blueprint-container-size;
+	margin-left: -235px;
+	text-align:right;
+	position:absolute;
+	top:90px;
+	font-family: $blueprint-font-family;
+	font-size:18px;
+	font-weight:bold !important;
+	a{
+		color:white;
+		text-decoration:none;
+	}
+	z-index:2;
+}
 @import 'partials/home';
 @import 'partials/user';

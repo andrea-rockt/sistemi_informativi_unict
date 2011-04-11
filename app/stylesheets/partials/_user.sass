@@ -1,9 +1,16 @@
-#sign_in
+#sign_in, #user_form_outer
 	+column(12,true)
 	background-color: white
-	border: solid 1px #ccc
 	+pull(-6)
+	border: solid 1px #ccc
 	padding: 20px
-	
-
-	
+	#text-align: center
+#sign_in_form, #user_form_inner
+	$width: 325px
+	position: relative
+	width: $width
+	#background-color: red
+	left: 50%
+	margin-left: - $width / 2 
+form#user_new, #user_form_inner form
+	+blueprint-form	

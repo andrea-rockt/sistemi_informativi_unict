@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Body:
+  =image_tag @user.avatar.url(:thumb)
+
+= link_to 'Edit', edit_user_path(@user)
+|
+\#{link_to 'Back', user_index_path}
