@@ -10,6 +10,7 @@ gem 'compass'
 gem 'haml'
 gem 'devise'
 gem 'paperclip'
+gem 'mongrel'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"  #Imposto l'utilizzo di rspec '

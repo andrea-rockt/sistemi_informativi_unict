@@ -5,12 +5,12 @@
 		<p>
 			<%= f.label :email %>
 			<br />
-			<%= f.email_field :email %>
+			<%= f.email_field :email, :placeholder => "email@domain.com" %>
 		</p>
 		<p>
 			<%= f.label :password %>
 			<br />
-			<%= f.password_field :password %>
+			<%= f.password_field :password, :placeholder => "Password"%>
 		</p>
 		<% if devise_mapping.rememberable? -%>
 		<p>

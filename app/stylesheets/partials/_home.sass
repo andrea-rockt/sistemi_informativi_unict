@@ -1,11 +1,29 @@
+
 #column1
 	+column(12)
 	+append(2)
-	min-height: 500px
+	//min-height: 800px
 	background-color: white
 	border: solid 1px #ccc
 	padding: 20px
-
+	padding-bottom: 300px
+	background-image: url("/images/home_1.jpg")
+	background-repeat: no-repeat
+	background-position: bottom left
+	img
+		border: solid 5px #ccc
+		margin-left: 20px
+		margin-bottom: 10px
+		+column(11, true)
+	img:hover
+		border: solid 5px black
+		
+	#contenuto  h1
+		font-size: 28px
+		font-weight: bold
+		padding-bottom: 3px
+		border-bottom: solid 1px #10a73f
+		
 #column2
 	+column(9,true)
 	min-height: 500px

@@ -8,7 +8,8 @@ $blueprint-font-family: Helvetica, Arial, sans-serif;
 
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
-
+@import "compass/css3/transform";
+@import "compass/css3/transition";
 // Import the non-default scaffolding module.
 //@import "blueprint/scaffolding";
 
@@ -30,19 +31,18 @@ $blueprint-font-family: Helvetica, Arial, sans-serif;
 //@include blueprint-scaffolding("body");
 
 
+
 body {
   @include blueprint-typography(true);
   @include blueprint-utilities;
   @include blueprint-debug;
   @include blueprint-interaction;
-
-  
-  background: {
-  	color:#f0f0f0;
-  }
-  
+  @include quiet();  
 }
 
+strong{
+  @include normal-text;
+}
 #grid{
 	@include container;
 	//@include showgrid;
@@ -121,6 +121,7 @@ body {
 }
 
 footer{
+	
 	height:200px;
 	padding-top:20px;
 	hr{
@@ -186,5 +187,17 @@ footer{
 	}
 	z-index:2;
 }
+
+#sub_list{
+		@include horizontal-list;
+		color:white;
+}
+#right_aligned_li{
+position:absolute;
+right:0px;
+margin-right:20px
+}
+
 @import 'partials/home';
 @import 'partials/user';
+@import 'partials/footer';

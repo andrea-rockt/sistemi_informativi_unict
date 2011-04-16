@@ -21,13 +21,7 @@
 		</div>
 
 		<header id="pages_header">
-					<div id="session_info">
-			<% unless current_user%>
-					<a href="<%= new_user_session_path%>"> LOGIN </a>
-			<% else%>
-					<a href="#"><%=current_user.email%> - </a><a href="/users/sign_out">signout</a></p>
-			<% end%>
-		</div>
+					
 			<img id="logo" src="/images/logo.png"/>
 			<nav id="main_nav">
 				<ul>
@@ -37,12 +31,24 @@
 					<li>
 						<a href="#">PRODOTTI</a>
 					</li>
+					
+					<li id="right_aligned_li">
+						<ul id="sub_list">
+							<li>
+								<% unless current_user%>
+									<a href="<%= new_user_session_path%>"> LOGIN </a>
+								<% else%>
+									<a href="<%= user_path(current_user)%>"><%= current_user.email%> - </a><a href="/users/sign_out">signout</a></p>
+								<% end%>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 			<nav id="breadcrumb_nav">
 				<ul>
 					<li>
-						<a href="#">
+						<a href="<%=root_path%>">
 							<img width="30" src="/images/home.png">
 						</a>
 						<img width="30" src="/images/arrow.png">
@@ -59,6 +65,10 @@
 		
 		<footer ="pages_footer">
 			<hr>
+			<div id="features_container">
+				<div class="rotate">Using Rails</div>
+			</div>
+				
 		</footer>
 	</body>
 </html>

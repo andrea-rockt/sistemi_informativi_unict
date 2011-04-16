@@ -1,11 +1,20 @@
-%p#notice= notice
-%p
-  %b Email:
-  = @user.email
-%p
-  %b Body:
-  =image_tag @user.avatar.url(:thumb)
+%section#user_index_section
 
-= link_to 'Edit', edit_user_path(@user)
-|
-\#{link_to 'Back', user_index_path}
+	#left_col
+		=image_tag @user.avatar.url(:thumb)
+	#right_col
+		%p
+			%label
+				Email:
+			= @user.email
+
+
+
+/	
+	%p
+		%b Body:
+		
+	
+	= link_to 'Edit', edit_user_path(@user)
+	|
+	\#{link_to 'Back', :back}

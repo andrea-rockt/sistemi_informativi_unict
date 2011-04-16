@@ -1,5 +1,19 @@
 #column1
-	col1
+	%section#contenuto
+		%header
+			%h1 Passione per lo Snowboard ?
+		%img{:src => "images/home_3.jpg"}
+		%p
+			%strong
+				Sei nel posto giusto
+			
+			qui potrai trovare tutta l'attrezzatura necessaria a praticare
+			questo bellissimo sport.
+			%br/
+			Solo tecnologie all'avanguardia, materiali
+			di prima scelta e le migliori marche fanno parte del nostro catalogo
+			perciò cosa aspetti? comincia a navigare tra le nostre offerte oppure
+			consulta le date degli eventi nella sezione news
 #column2
 	%section#news
 		%header#news_section
@@ -11,9 +25,9 @@
 						%h1
 							=n.title
 						%p.data
-							Publicato il:
+							Pubblicato il:
 							=n.created_at.to_formatted_s :short
 					%p
-						=n.body
+						=n.body.html_safe
 			
 		
