@@ -5,8 +5,36 @@
 	#right_col
 		%p
 			%label
+				Nome utente:
+			= @user.user_name
+		%p
+			%label
 				Email:
 			= @user.email
+		%p
+			%label
+				Nome:
+			= @user.name
+		%p
+			%label
+				Cognome:
+			= @user.surname
+		%p
+			%label
+				Indirizzo:
+			= @user.address
+		%p
+			%label
+				Città:
+			= @user.city
+		%p
+			%label
+				Paese:
+			= @user.country
+		%p
+			%label
+				Altezza:
+			= @user.height?? @user.height : "Altezza non impostata"
 
 
 
