@@ -38,7 +38,7 @@
 								<% unless current_user%>
 									<a href="<%= new_user_session_path%>"> LOGIN </a>
 								<% else%>
-									<a href="<%= user_path(current_user)%>"><%= current_user.email%> - </a><a href="/users/sign_out">signout</a></p>
+									<a href="<%= user_path(current_user)%>"><%= current_user.user_name%></a> - <a href="/users/sign_out">ESCI</a></p>
 								<% end%>
 							</li>
 						</ul>
