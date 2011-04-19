@@ -1,4 +1,6 @@
 SistemiInformativiUnict::Application.routes.draw do
+  match "mark_it_up/preview" => "mark_it_up#preview"
+
   devise_for :users
 
   resources :news

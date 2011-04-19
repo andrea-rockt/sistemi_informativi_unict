@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110416130119) do
+ActiveRecord::Schema.define(:version => 20110417170735) do
 
   create_table "news", :force => true do |t|
     t.string   "title"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20110416130119) do
     t.string   "address",                             :default => "address",  :null => false
     t.string   "city",                                :default => "city",     :null => false
     t.string   "country",                             :default => "country",  :null => false
-    t.integer  "height"
+    t.float    "height"
     t.string   "user_name",                           :default => "username", :null => false
   end
 

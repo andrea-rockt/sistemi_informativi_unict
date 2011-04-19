@@ -719,8 +719,15 @@ header .news > h1 {
 }
 
 /* line 45, ../../../app/stylesheets/partials/_home.sass */
-header .news > p.data {
+header .news p > span.data {
   color: #10a73f;
+  margin-top: -8px;
+  font-size: 10px;
+}
+
+/* line 50, ../../../app/stylesheets/partials/_home.sass */
+header .news p > span.author {
+  color: #666666;
   margin-top: -8px;
   font-size: 10px;
 }
@@ -859,7 +866,7 @@ form#user_new textarea, #user_form_inner form textarea {
   margin-right: 10px;
   width: 110px;
   border-right: solid 1px #cccccc;
-  min-height: 400px;
+  height: 400px;
 }
 /* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #user_index_section #left_col {
@@ -879,7 +886,7 @@ form#user_new textarea, #user_form_inner form textarea {
   float: left;
   margin-right: 0;
   width: 710px;
-  min-height: 400px;
+  height: 400px;
   padding-left: 10px;
   font-size: 14px;
   color: #666666;
@@ -888,10 +895,104 @@ form#user_new textarea, #user_form_inner form textarea {
 * html #user_index_section #right_col {
   overflow-x: hidden;
 }
-/* line 53, ../../../app/stylesheets/partials/_user.sass */
-#user_index_section label {
+/* line 54, ../../../app/stylesheets/partials/_user.sass */
+#user_index_section #right_col label {
   font-family: Helvetica, Arial, sans-serif;
   color: #333333;
+}
+/* line 57, ../../../app/stylesheets/partials/_user.sass */
+#user_index_section #right_col #dati {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 350px;
+}
+/* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #user_index_section #right_col #dati {
+  overflow-x: hidden;
+}
+/* line 60, ../../../app/stylesheets/partials/_user.sass */
+#user_index_section #right_col #heigth_display {
+  text-align: center;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 350px;
+}
+/* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #user_index_section #right_col #heigth_display {
+  overflow-x: hidden;
+}
+
+/* line 64, ../../../app/stylesheets/partials/_user.sass */
+.jeditable_form {
+  display: inline;
+  line-height: 3;
+}
+/* line 18, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form label {
+  font-weight: bold;
+}
+/* line 19, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form fieldset {
+  padding: 1.4em;
+  margin: 0 0 1.5em 0;
+}
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form legend {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form input.text, .jeditable_form input.title, .jeditable_form input[type=email], .jeditable_form input[type=text], .jeditable_form input[type=password] {
+  margin: 0.5em 0;
+  background-color: white;
+  padding: 5px;
+}
+/* line 27, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form input.title {
+  font-size: 1.5em;
+}
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form input[type=checkbox], .jeditable_form input.checkbox, .jeditable_form input[type=radio], .jeditable_form input.radio {
+  position: relative;
+  top: 0.25em;
+}
+/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form textarea {
+  margin: 0.5em 0;
+  padding: 5px;
+}
+/* line 34, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form select {
+  margin: 0.5em 0;
+}
+/* line 59, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form fieldset {
+  border: 1px solid #cccccc;
+}
+/* line 62, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form input.text, .jeditable_form input.title, .jeditable_form input[type=email], .jeditable_form input[type=text], .jeditable_form input[type=password],
+.jeditable_form textarea, .jeditable_form select {
+  border: 1px solid #bbbbbb;
+}
+/* line 64, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form input.text:focus, .jeditable_form input.title:focus, .jeditable_form input[type=email]:focus, .jeditable_form input[type=text]:focus, .jeditable_form input[type=password]:focus,
+.jeditable_form textarea:focus, .jeditable_form select:focus {
+  border: 1px solid #666666;
+}
+/* line 48, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form input.text, .jeditable_form input.title, .jeditable_form input[type=email], .jeditable_form input[type=text], .jeditable_form input[type=password] {
+  width: 300px;
+}
+/* line 50, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form textarea {
+  width: 390px;
+  height: 250px;
+}
+/* line 6, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+.jeditable_form p {
+  margin-bottom: 0;
 }
 
 /* line 4, ../../../app/stylesheets/partials/_footer.sass */

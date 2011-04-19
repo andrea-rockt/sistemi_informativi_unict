@@ -36,7 +36,7 @@ form#user_new, #user_form_inner form
 		padding-right: 20px
 		+column(3)
 		border-right: solid 1px #ccc
-		min-height: 400px
+		height: 400px
 		img
 			border: solid 5px #ccc
 
@@ -46,11 +46,23 @@ form#user_new, #user_form_inner form
 	
 	#right_col
 		+column(18,true)
-		min-height: 400px
+		height: 400px
 		padding-left: 10px
 		font-size: 14px
 		+quiet
-	label
-		+normal-text
+		
+		label
+			+normal-text
+			
+		#dati
+			+column(9)
+			
+		#heigth_display
+			text-align: center
+			+column(9,true)
 
+.jeditable_form
+	display: inline
 
+	+blueprint-form
+	+blueprint-inline-form

@@ -1,3 +1,16 @@
+GIT
+  remote: git://github.com/afeld/jeditable-rails.git
+  revision: 691e322bf2ab8f4abf4b5052a4b36e2be38bd6a5
+  branch: callback
+  specs:
+    jeditable-rails (0.1.1)
+
+GIT
+  remote: git://github.com/cingel/mark_it_up.git
+  revision: 78dc5bc7e27926131872a4641af3fa958e046794
+  specs:
+    mark_it_up (0.0.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -110,6 +123,8 @@ DEPENDENCIES
   compass
   devise
   haml
+  jeditable-rails!
+  mark_it_up!
   mongrel
   paperclip
   rails (= 3.0.5)

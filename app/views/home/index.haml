@@ -24,9 +24,15 @@
 					%header.news
 						%h1
 							=n.title
-						%p.data
-							Pubblicato il:
-							=n.created_at.to_formatted_s :short
+						%p
+							%span.data
+								Pubblicato il:
+								=n.created_at.to_formatted_s :short
+							%span.author
+								Da:
+								=n.user.user_name
+							
+							
 					%p
 						=n.body.html_safe
 			

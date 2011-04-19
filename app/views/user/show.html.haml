@@ -2,47 +2,43 @@
 
 	#left_col
 		=image_tag @user.avatar.url(:thumb)
+		%p
+			Fail click sui dati per modificarli
 	#right_col
-		%p
-			%label
-				Nome utente:
-			= @user.user_name
-		%p
-			%label
-				Email:
-			= @user.email
-		%p
-			%label
-				Nome:
-			= @user.name
-		%p
-			%label
-				Cognome:
-			= @user.surname
-		%p
-			%label
-				Indirizzo:
-			= @user.address
-		%p
-			%label
-				Città:
-			= @user.city
-		%p
-			%label
-				Paese:
-			= @user.country
-		%p
-			%label
-				Altezza:
-			= @user.height?? @user.height : "Altezza non impostata"
+		#dati
+			%p
+				%label
+					Nome utente:
+				= @user.user_name
+			%p
+				%label
+					Email:
+				= @user.email
+			%p
+				%label
+					Nome:
+				= default_editable_field @user,:name
+			%p
+				%label
+					Cognome:
+				= default_editable_field @user,:surname
+			%p
+				%label
+					Indirizzo:
+				= default_editable_field @user,:address
+			%p
+				%label
+					Città:
+				= default_editable_field @user, :city
+			%p
+				%label
+					Paese:
+				= default_editable_field @user, :country
+			%p
+				%label
+					Altezza:
+				= default_editable_field @user, :height, :callback => "{callback:resize_snowboarder}"
+		#heigth_display
+			%img#turi{:src=>"/images/snowboarder.png"}	
 
 
-
-/	
-	%p
-		%b Body:
-		
-	
-	= link_to 'Edit', edit_user_path(@user)
-	|
-	\#{link_to 'Back', :back}
