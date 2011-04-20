@@ -1,7 +1,7 @@
 %section#user_index_section
 
 	#left_col
-		=image_tag @user.avatar.url(:thumb)
+		=image_tag @user.avatar.url(:thumb), :id => 'user_avatar' 
 		%p
 			Fail click sui dati per modificarli
 	#right_col
@@ -37,8 +37,16 @@
 			%p
 				%label
 					Altezza:
-				= default_editable_field @user, :height, :callback => "{callback:resize_snowboarder}"
+				= default_editable_field @user, :height, :callback => "{callback:resize_snowboarder}",:type =>"masked",:mask => "9.99"
 		#heigth_display
-			%img#turi{:src=>"/images/snowboarder.png"}	
-
+			//%img#turi{:src=>"/images/snowboarder.png"}
+			#gauge
+				#snowboarder
+		
+#form_avatar_upload{:style => "display:none"}
+	= form_for(:user, @user,:url => user_path,:html => {:multipart => true,:method=>"put"}) do |f|
+		=f.file_field :avatar
+		=f.submit
+				
+					
 

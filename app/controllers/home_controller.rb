@@ -1,9 +1,8 @@
 class HomeController < ApplicationController
 	def index
-		@news = News.all
-      	logger.debug @current_user.to_s
+		@news = News.all.reverse
 		respond_to do |type|
-			type.html # using defaults, which will render weblog/index.rhtml
+			type.html 
 		end
 	end
 end

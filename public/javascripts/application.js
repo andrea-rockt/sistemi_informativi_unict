@@ -4,9 +4,9 @@
 
 function resize_snowboarder(){
 	snowboarder_height = $('span[data-name="user[height]"]').text();
-	snowboarder_height /= 1.90;
-	snowboarder_height *=362;
-	$("#turi").css({height:snowboarder_height});
+	snowboarder_height /= 2.20;
+	snowboarder_height *=100;
+	$("#snowboarder").animate({"background-size":snowboarder_height+"%"},1000);
 }
 
 $(document).ready( function() {
@@ -18,8 +18,24 @@ $(document).ready( function() {
 
 	})
 	
+	//$("#")
 	resize_snowboarder()
-
+	
+	/*$('input[name="user[height]"]').live('focus',function(){
+		$(this).mask("9.99");
+	})*/
+	
+	$('#user_avatar').fancybox({
+		type: 'inline',
+		href: '#form_avatar_upload',
+		showCloseButton: true,
+		onStart: function(){
+			$('#form_avatar_upload').css({'display':'block'});
+		},
+		onClosed: function(){
+			$('#form_avatar_upload').css({'display':'none'});
+		}
+	})
 	
 	
 	//$("#flashes:has(#flash)").fadeOut(1000);
