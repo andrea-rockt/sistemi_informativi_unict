@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 	attr_accessor :login
 	
 	validates_numericality_of :height, :less_than => 2.2, :greater_than =>1.4
-	validates_presence_of :email,:password,:user_name,:height,:country,:name,:surname,:address,:city
+	validates_presence_of :email,:user_name,:height,:country,:name,:surname,:address,:city
 	validates_uniqueness_of :user_name
 	#questo metodo serve per permettere a devise di autenticare l'utente fornendo o username o email'
 	protected

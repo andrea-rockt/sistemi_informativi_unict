@@ -6,6 +6,7 @@ module ActionView::Helpers
 		#An unobstrusive javascript helper has to be add
 		def masked_text_field(method,mask,options={})
 			@template.text_field @object_name, method,options.merge({"data-mask"=> mask})
+			end
 		end
 	end
-end
+
