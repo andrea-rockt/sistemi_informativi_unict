@@ -8,6 +8,15 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 gem 'compass'
 gem 'haml'
+gem 'devise'
+gem 'paperclip'
+gem 'mongrel'
+gem 'jquery-rails', '>= 0.2.6'
+gem 'rails3-jquery-autocomplete'
+
+#gem 'jeditable-rails'
+gem "jeditable-rails", :git => "git://github.com/afeld/jeditable-rails.git", :branch => "callback"
+gem "mark_it_up", :git => "git://github.com/cingel/mark_it_up.git"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"  #Imposto l'utilizzo di rspec '

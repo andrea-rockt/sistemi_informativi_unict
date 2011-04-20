@@ -11,7 +11,8 @@ module SistemiInformativiUnict
     # Added by the Rails 3 jQuery Template
     # http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
-    config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)
+    #config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -36,12 +37,16 @@ module SistemiInformativiUnict
     config.i18n.default_locale = :it
 
     # JavaScript files you want as :defaults (application.js is always included).
-    # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
-
+    config.action_view.javascript_expansions[:defaults] << ['jquery.fancybox-1.3.4',
+							'jquery.jeditable.mini','jquery.maskedinput-1.3.min','jquery.jeditable.masked','application.maskedinput'] 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+	config.after_initialize do
+		require "extensions/masked_input_field"
+	end
   end
 end

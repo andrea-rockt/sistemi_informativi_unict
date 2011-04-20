@@ -1,0 +1,86 @@
+#sign_in, #user_form_outer
+	+column(12,true)
+	background-color: white
+	+pull(-6)
+	border: solid 1px #ccc
+	padding: 20px
+	
+#user_form_outer1
+	+column(12,true)
+	+pull(+2)
+	padding: 20px
+	background-color: white
+	border: solid 1px #ccc
+	
+#sign_in_form, #user_form_inner
+	$width: 325px
+	position: relative
+	width: $width
+	#background-color: red
+	left: 50%
+	margin-left: - $width / 2 
+
+form#user_new, #user_form_inner form
+	+blueprint-form	
+	
+#user_index_section
+	padding: 20px
+	+column(22,true)	
+	background-color: white
+	border: solid 1px #ccc
+	background-position: bottom right
+	background-image: url("/images/home_1mod.jpg")
+	background-repeat: no-repeat
+
+	#left_col
+		padding-right: 20px
+		+column(3)
+		border-right: solid 1px #ccc
+		height: 400px
+		img
+			border: solid 5px #ccc
+
+		img:hover
+			border: solid 5px black
+
+	
+	#right_col
+		+column(18,true)
+		height: 400px
+		padding-left: 10px
+		font-size: 14px
+		+quiet
+		
+		label
+			+normal-text
+			
+		#dati
+			+column(9)
+			
+		#heigth_display
+			text-align: center
+			+column(9,true)
+
+.jeditable_form
+	display: inline
+
+	+blueprint-form
+	+blueprint-inline-form
+	
+#heigth_display
+	#gauge
+		background-image: url("/images/gauge.png")
+		width: 370px
+		height: 378px
+		background-repeat: no-repeat
+		padding-left: 20px
+		#snowboarder
+			height: 378px
+			width: 370px
+			background-clip: 351px, 362px
+			background-size: 50%
+			background-repeat: no-repeat
+			background-position: bottom center
+			background-image: url("/images/snowboarder.png")	
+.editable
+	text-decoration: underline

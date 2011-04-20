@@ -1,0 +1,27 @@
+@import "compass/css3/background-size"
+
+
+#features_container
+	+container
+	text-align: center
+	
+.rotate
+	+normal-text
+	padding-top: 70px
+	font-size: 20px
+	height: 120px
+	width: 150px !important
+	background-image: url("/images/features/rails.png")
+	-webkit-transform-style: preserve-3d
+	-webkit-backface-visibility: hidden
+	//-webkit-transform: rotateY(-180deg)
+	width: 100px
+	+transition(all, 0.4s,ease-in-out,initial)
+	background-position: 0px 150px
+	
+.rotate:hover
+	-webkit-transform: rotate(0deg)
+	background-position: 0px 0px
+	color: transparent
+	
+

@@ -1,3 +1,7 @@
+<% content_for :head do
+		mark_it_up '#miu_test'
+end%>
+
 <%= form_for(@news) do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
@@ -13,16 +17,13 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title%>
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :id=>"miu_test" %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

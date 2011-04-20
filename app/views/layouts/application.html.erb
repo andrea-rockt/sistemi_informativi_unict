@@ -4,26 +4,52 @@
 		<title><%= t 'title' %></title>
 		<%= stylesheet_link_tag "compiled/screen" %>
 		<%= stylesheet_link_tag "compiled/print" %>
-		<%= javascript_include_tag :defaults %>
+		<%= javascript_include_tag  :defaults%>
 		<%= csrf_meta_tag %>
+		<%= yield :head%>
 	</head>
 	<body>
+		<div id="flashes">
+
+				<% [:info, :error,:notice,:alert].each do |key| %>
+				   <% if flash[key] %>
+				   <div class="<%= key %>" id="flash">
+				     <%= flash[key] %>
+				    <div id="close_flash"></div>
+				   </div>
+				   <% end %>
+				 <% end %>
+		</div>
+
 		<header id="pages_header">
+					
 			<img id="logo" src="/images/logo.png"/>
 			<nav id="main_nav">
 				<ul>
 					<li>
-						<a href="#">HOME</a>
+						<a href="<%= root_path %>">HOME</a>
 					</li>
 					<li>
 						<a href="#">PRODOTTI</a>
+					</li>
+					
+					<li id="right_aligned_li">
+						<ul id="sub_list">
+							<li>
+								<% unless current_user%>
+									<a href="<%= new_user_session_path%>"> LOGIN </a>
+								<% else%>
+									<a href="<%= user_path(current_user)%>"><%= current_user.user_name.upcase%></a> - <a href="/users/sign_out">ESCI</a></p>
+								<% end%>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</nav>
 			<nav id="breadcrumb_nav">
 				<ul>
 					<li>
-						<a href="#">
+						<a href="<%=root_path%>">
 							<img width="30" src="/images/home.png">
 						</a>
 						<img width="30" src="/images/arrow.png">
@@ -32,6 +58,7 @@
 			</nav>
 		</header>
 		<div id="main">
+
 			<div id="grid">
 				<%= yield %>
 			</div>
@@ -39,6 +66,10 @@
 		
 		<footer ="pages_footer">
 			<hr>
+			<!--<div id="features_container">
+				<div class="rotate">Using Rails</div>
+			</div>
+			-->	
 		</footer>
 	</body>
 </html>

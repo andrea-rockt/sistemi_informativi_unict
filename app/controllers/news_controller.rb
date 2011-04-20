@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  before_filter :require_admin!, :except => [:index,:show]
   # GET /news
   # GET /news.xml
   def index
@@ -25,7 +26,6 @@ class NewsController < ApplicationController
   # GET /news/new.xml
   def new
     @news = News.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @news }
@@ -41,7 +41,7 @@ class NewsController < ApplicationController
   # POST /news.xml
   def create
     @news = News.new(params[:news])
-
+	@news.user = current_user
     respond_to do |format|
       if @news.save
         format.html { redirect_to(@news, :notice => 'News was successfully created.') }
@@ -57,7 +57,7 @@ class NewsController < ApplicationController
   # PUT /news/1.xml
   def update
     @news = News.find(params[:id])
-
+	@news.user = current_user
     respond_to do |format|
       if @news.update_attributes(params[:news])
         format.html { redirect_to(@news, :notice => 'News was successfully updated.') }

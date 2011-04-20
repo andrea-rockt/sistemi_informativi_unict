@@ -1,0 +1,52 @@
+%section#user_index_section
+
+	#left_col
+		=image_tag @user.avatar.url(:thumb), :id => 'user_avatar' 
+		%p
+			Fail click sui dati per modificarli
+	#right_col
+		#dati
+			%p
+				%label
+					Nome utente:
+				= @user.user_name
+			%p
+				%label
+					Email:
+				= @user.email
+			%p
+				%label
+					Nome:
+				= default_editable_field @user,:name
+			%p
+				%label
+					Cognome:
+				= default_editable_field @user,:surname
+			%p
+				%label
+					Indirizzo:
+				= default_editable_field @user,:address
+			%p
+				%label
+					Città:
+				= default_editable_field @user, :city
+			%p
+				%label
+					Paese:
+				= default_editable_field @user, :country
+			%p
+				%label
+					Altezza:
+				= default_editable_field @user, :height, :callback => "{callback:resize_snowboarder}",:type =>"masked",:mask => "9.99"
+		#heigth_display
+			//%img#turi{:src=>"/images/snowboarder.png"}
+			#gauge
+				#snowboarder
+		
+#form_avatar_upload{:style => "display:none"}
+	= form_for(:user, @user,:url => user_path,:html => {:multipart => true,:method=>"put"}) do |f|
+		=f.file_field :avatar
+		=f.submit
+				
+					
+

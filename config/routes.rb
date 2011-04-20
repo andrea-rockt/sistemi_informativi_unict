@@ -1,6 +1,16 @@
 SistemiInformativiUnict::Application.routes.draw do
-  resources :news
+  match "mark_it_up/preview" => "mark_it_up#preview"
 
+  devise_for :users
+
+  resources :news
+  
+  resources :user do
+	get :autocomplete_city_name, :on => :collection
+  end
+
+  match 'user/:id/edit' => 'user#edit'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
