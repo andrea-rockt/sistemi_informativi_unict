@@ -1014,6 +1014,11 @@ form#user_new textarea, #user_form_inner form textarea {
   background-image: url("/images/snowboarder.png");
 }
 
+/* line 85, ../../../app/stylesheets/partials/_user.sass */
+.editable {
+  text-decoration: underline;
+}
+
 /* line 4, ../../../app/stylesheets/partials/_footer.sass */
 #features_container {
   width: 950px;

@@ -177,6 +177,7 @@ it:
         less_than_or_equal_to: "deve essere meno o uguale a %{count}"
         odd: "deve essere dispari"
         even: "deve essere pari"
+        not_saved: "Impossibile salvare il record"
 
   activerecord:
     errors:
@@ -202,3 +203,10 @@ it:
   users:
   	sign_in:
   		sign_in_title: "Perfavore effettua il login"
+  	sign_up:
+  		height: Altezza
+  		name: Nome
+  		surname: Cognome
+  		address: Indirizzo
+  		city: Città
+  		country: Paese

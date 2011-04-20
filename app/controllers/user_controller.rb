@@ -1,4 +1,5 @@
 class UserController < ApplicationController
+	before_filter :require_admin!, :except => [:index,:show,:update,:create]
 	def index
 		@users = User.all
 

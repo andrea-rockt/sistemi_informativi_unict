@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110417170735) do
+ActiveRecord::Schema.define(:version => 20110420195907) do
 
   create_table "news", :force => true do |t|
     t.string   "title"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(:version => 20110417170735) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "",         :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "",         :null => false
+    t.string   "email",                               :default => "",    :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",                       :default => 0
@@ -32,18 +32,18 @@ ActiveRecord::Schema.define(:version => 20110417170735) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_admin",                            :default => false,      :null => false
+    t.boolean  "is_admin",                            :default => false, :null => false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "name",                                :default => "name",     :null => false
-    t.string   "surname",                             :default => "surname",  :null => false
-    t.string   "address",                             :default => "address",  :null => false
-    t.string   "city",                                :default => "city",     :null => false
-    t.string   "country",                             :default => "country",  :null => false
+    t.string   "name",                                                   :null => false
+    t.string   "surname",                                                :null => false
+    t.string   "address",                                                :null => false
+    t.string   "city",                                                   :null => false
+    t.string   "country",                                                :null => false
     t.float    "height"
-    t.string   "user_name",                           :default => "username", :null => false
+    t.string   "user_name",                                              :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
