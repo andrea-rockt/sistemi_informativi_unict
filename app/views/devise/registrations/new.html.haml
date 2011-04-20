@@ -1,3 +1,5 @@
+- content_for :head do
+	=javascript_include_tag  "jquery-ui-1.8.11.custom.min" ,"autocomplete-rails.js"
 #user_form_outer
 	#user_form_inner
 		%h2 Registrati
@@ -35,10 +37,11 @@
 				= f.label t :address
 				%br/
 				= f.text_field :address
+
 			%p
 				= f.label t :city
 				%br/
-				= f.text_field :city
+				= f.autocomplete_field :city, autocomplete_city_name_user_index_path
 			%p
 				= f.label t :country
 				%br/

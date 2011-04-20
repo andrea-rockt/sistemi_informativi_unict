@@ -1,5 +1,7 @@
 class UserController < ApplicationController
-	before_filter :require_admin!, :except => [:index,:show,:update,:create]
+	before_filter :require_admin!, :except => [:index,:show,:update,:create,:autocomplete_city_name]
+	autocomplete :city, :name
+
 	def index
 		@users = User.all
 

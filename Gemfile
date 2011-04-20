@@ -11,6 +11,8 @@ gem 'haml'
 gem 'devise'
 gem 'paperclip'
 gem 'mongrel'
+gem 'jquery-rails', '>= 0.2.6'
+gem 'rails3-jquery-autocomplete'
 
 #gem 'jeditable-rails'
 gem "jeditable-rails", :git => "git://github.com/afeld/jeditable-rails.git", :branch => "callback"

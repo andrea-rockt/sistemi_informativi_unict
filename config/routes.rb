@@ -5,7 +5,10 @@ SistemiInformativiUnict::Application.routes.draw do
 
   resources :news
   
-  resources :user
+  resources :user do
+	get :autocomplete_city_name, :on => :collection
+  end
+
   match 'user/:id/edit' => 'user#edit'
   
   # The priority is based upon order of creation:
