@@ -38,8 +38,12 @@
 							<li>
 								<% unless current_user%>
 									<a href="<%= new_user_session_path%>"> LOGIN </a>
-								<% else%>
-									<a href="<%= user_path(current_user)%>"><%= current_user.user_name.upcase%></a> - <a href="/users/sign_out">ESCI</a></p>
+								<% else%>							
+									<a href="<%= user_path(current_user)%>"><%= current_user.user_name.upcase%></a> - 
+									<% if current_user.try(:is_admin)%>
+										<%= link_to "ADMIN", :controller => "home", :action => "admin"%> - 
+									<% end %>
+									<a href="/users/sign_out">ESCI</a></p>
 								<% end%>
 							</li>
 						</ul>
@@ -49,7 +53,7 @@
 			<nav id="breadcrumb_nav">
 				<ul>
 					<li>
-						<a href="<%=root_path%>">
+						<a href="<%= root_path%>">
 							<img width="30" src="/images/home.png">
 						</a>
 						<img width="30" src="/images/arrow.png">

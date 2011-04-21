@@ -773,7 +773,7 @@ header .news p > span.author {
 * html #admin_page #manage_users, * html #admin_page #manage_news, * html #admin_page #manage_products, * html #admin_page #manage_comments {
   overflow-x: hidden;
 }
-/* line 76, ../../../app/stylesheets/partials/_home.sass */
+/* line 78, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_users a, #admin_page #manage_news a, #admin_page #manage_products a, #admin_page #manage_comments a {
   display: block;
   height: 100%;
@@ -783,34 +783,34 @@ header .news p > span.author {
   padding-left: 20px;
   font-size: 18px;
 }
-/* line 85, ../../../app/stylesheets/partials/_home.sass */
+/* line 87, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_users:hover, #admin_page #manage_news:hover, #admin_page #manage_comments:hover {
   background-position: 130px 5px;
 }
-/* line 88, ../../../app/stylesheets/partials/_home.sass */
+/* line 90, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_users {
   background-image: url("/images/admin_icons/User.png");
 }
-/* line 91, ../../../app/stylesheets/partials/_home.sass */
+/* line 93, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_news {
   background-image: url("/images/admin_icons/News.png");
   background-size: 50%;
 }
-/* line 95, ../../../app/stylesheets/partials/_home.sass */
+/* line 97, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_comments {
   background-image: url("/images/admin_icons/Comments.png");
   background-size: 50%;
   background-position: 180px 5px;
 }
-/* line 101, ../../../app/stylesheets/partials/_home.sass */
+/* line 103, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_products {
   background-image: url("/images/admin_icons/Products.png");
-  background-position: 160px 0px;
-  background-size: 55%;
+  background-position: 160px 5px;
+  background-size: 50%;
 }
-/* line 106, ../../../app/stylesheets/partials/_home.sass */
+/* line 108, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_products:hover {
-  background-position: 130px 0px;
+  background-position: 130px 5px;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_user.sass */
