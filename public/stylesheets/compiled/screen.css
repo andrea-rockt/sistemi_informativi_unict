@@ -330,7 +330,7 @@ body .bottom {
 }
 /* line 8, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 body .showgrid {
-  background: url('/images/grid.png?1302300469');
+  background: url('/images/grid.png?1303342212');
 }
 /* line 4, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 body .error {
@@ -732,6 +732,44 @@ header .news p > span.author {
   font-size: 10px;
 }
 
+/* line 55, ../../../app/stylesheets/partials/_home.sass */
+#admin_page {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 790px;
+  padding-left: 120px;
+}
+/* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #admin_page {
+  overflow-x: hidden;
+}
+/* line 64, ../../../app/stylesheets/partials/_home.sass */
+#admin_page #manage_users, #admin_page #manage_news, #admin_page #manage_products, #admin_page #manage_comments {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  height: 100px;
+  background-color: white;
+  border: solid 1px #cccccc;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* line 138, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #admin_page #manage_users, * html #admin_page #manage_news, * html #admin_page #manage_products, * html #admin_page #manage_comments {
+  overflow-x: hidden;
+}
+/* line 72, ../../../app/stylesheets/partials/_home.sass */
+#admin_page #manage_users a, #admin_page #manage_news a, #admin_page #manage_products a, #admin_page #manage_comments a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
 /* line 1, ../../../app/stylesheets/partials/_user.sass */
 #sign_in, #user_form_outer {
   display: inline;
@@ -840,8 +878,12 @@ form#user_new textarea, #user_form_inner form textarea {
   width: 390px;
   height: 250px;
 }
-
 /* line 26, ../../../app/stylesheets/partials/_user.sass */
+form#user_new div.field_with_errors input, #user_form_inner form div.field_with_errors input {
+  background-color: #ff6633;
+}
+
+/* line 31, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section {
   padding: 20px;
   display: inline;
@@ -858,7 +900,7 @@ form#user_new textarea, #user_form_inner form textarea {
 * html #user_index_section {
   overflow-x: hidden;
 }
-/* line 35, ../../../app/stylesheets/partials/_user.sass */
+/* line 40, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section #left_col {
   padding-right: 20px;
   display: inline;
@@ -872,15 +914,15 @@ form#user_new textarea, #user_form_inner form textarea {
 * html #user_index_section #left_col {
   overflow-x: hidden;
 }
-/* line 40, ../../../app/stylesheets/partials/_user.sass */
+/* line 45, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section #left_col img {
   border: solid 5px #cccccc;
 }
-/* line 43, ../../../app/stylesheets/partials/_user.sass */
+/* line 48, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section #left_col img:hover {
   border: solid 5px black;
 }
-/* line 47, ../../../app/stylesheets/partials/_user.sass */
+/* line 52, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section #right_col {
   display: inline;
   float: left;
@@ -895,12 +937,12 @@ form#user_new textarea, #user_form_inner form textarea {
 * html #user_index_section #right_col {
   overflow-x: hidden;
 }
-/* line 54, ../../../app/stylesheets/partials/_user.sass */
+/* line 59, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section #right_col label {
   font-family: Helvetica, Arial, sans-serif;
   color: #333333;
 }
-/* line 57, ../../../app/stylesheets/partials/_user.sass */
+/* line 62, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section #right_col #dati {
   display: inline;
   float: left;
@@ -911,7 +953,7 @@ form#user_new textarea, #user_form_inner form textarea {
 * html #user_index_section #right_col #dati {
   overflow-x: hidden;
 }
-/* line 60, ../../../app/stylesheets/partials/_user.sass */
+/* line 65, ../../../app/stylesheets/partials/_user.sass */
 #user_index_section #right_col #heigth_display {
   text-align: center;
   display: inline;
@@ -924,7 +966,7 @@ form#user_new textarea, #user_form_inner form textarea {
   overflow-x: hidden;
 }
 
-/* line 64, ../../../app/stylesheets/partials/_user.sass */
+/* line 69, ../../../app/stylesheets/partials/_user.sass */
 .jeditable_form {
   display: inline;
   line-height: 3;
@@ -995,7 +1037,7 @@ form#user_new textarea, #user_form_inner form textarea {
   margin-bottom: 0;
 }
 
-/* line 71, ../../../app/stylesheets/partials/_user.sass */
+/* line 76, ../../../app/stylesheets/partials/_user.sass */
 #heigth_display #gauge {
   background-image: url("/images/gauge.png");
   width: 370px;
@@ -1003,7 +1045,7 @@ form#user_new textarea, #user_form_inner form textarea {
   background-repeat: no-repeat;
   padding-left: 20px;
 }
-/* line 77, ../../../app/stylesheets/partials/_user.sass */
+/* line 82, ../../../app/stylesheets/partials/_user.sass */
 #heigth_display #gauge #snowboarder {
   height: 378px;
   width: 370px;
@@ -1014,7 +1056,7 @@ form#user_new textarea, #user_form_inner form textarea {
   background-image: url("/images/snowboarder.png");
 }
 
-/* line 85, ../../../app/stylesheets/partials/_user.sass */
+/* line 90, ../../../app/stylesheets/partials/_user.sass */
 .editable {
   text-decoration: underline;
 }

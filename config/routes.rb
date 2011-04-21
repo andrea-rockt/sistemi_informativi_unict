@@ -22,8 +22,12 @@ SistemiInformativiUnict::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-	match 'home/' => 'home#index'
-	match 'home/:action' => 'home' 
+  controller :home do
+  	match '/admin' => 'home#admin'
+  end
+  
+  #	match 'home/' => 'home#index'
+  #	match 'home/:action' => 'home' 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

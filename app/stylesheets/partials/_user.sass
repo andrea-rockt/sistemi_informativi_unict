@@ -22,7 +22,12 @@
 
 form#user_new, #user_form_inner form
 	+blueprint-form	
-	
+	div.field_with_errors
+		input
+			background-color: #ff6633
+
+
+			
 #user_index_section
 	padding: 20px
 	+column(22,true)	
@@ -84,3 +89,4 @@ form#user_new, #user_form_inner form
 			background-image: url("/images/snowboarder.png")	
 .editable
 	text-decoration: underline
+
