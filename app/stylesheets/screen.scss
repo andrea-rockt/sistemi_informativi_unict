@@ -37,7 +37,8 @@ body {
   @include blueprint-utilities;
   @include blueprint-debug;
   @include blueprint-interaction;
-  @include quiet();  
+  @include quiet(); 
+  background-color: #f0f0f0 
 }
 
 strong{
@@ -203,3 +204,4 @@ margin-right:20px
 @import 'partials/footer';
 @import 'partials/fancybox';
 @import 'partials/uitheme';
+@import 'partials/news';
