@@ -1,22 +1,24 @@
-%h1 Listing users
-%table
-  %tr
-    %th Login
-    %th Admin
-    %th
-    %th
-    %th
-    - @users.each do |user| 
-      %tr
-        %td 
-          = user.email
-        %td 
-          = user.is_admin ? "x":"" 
-        %td 
-          = link_to 'Show', user
-        %td 
-          = link_to 'Edit', edit_user_path(user)
-        %td 
-          = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete 
-%br/
-= link_to 'New News', new_news_path
+%section#user_index
+	
+	-@users.each_with_index do |user,index|
+		-if (index%3) == 0
+			:plain
+				<div class="row"> 		
+		.user{:data =>{:user=>"#{user.user_name}"}, :style=> "background-image:url(#{user.avatar.url(:thumb)})"}
+			-link_to user do
+				%p
+					=user.email
+				%p
+					Username:
+					=user.user_name
+				%p
+					Admin:
+					=user.is_admin
+				-unless user.is_admin
+					%p
+						- link_to user, :class=> "delete_user" ,:confirm => "Sei sicuro di voler cancellare #{user.user_name}?", :method => :delete do
+							= image_tag "/images/editdelete.png"
+
+		-if (index%3) == 2
+			:plain
+				</div>
