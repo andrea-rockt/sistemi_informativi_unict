@@ -63,14 +63,47 @@ header .news p > span.author
 	
 	#manage_users, #manage_news, #manage_products, #manage_comments
 		+column(6)
+		overflow: hidden
 		height: 100px
 		background-color: white
 		border: solid 1px #ccc
 		margin:
 			top: 5px
 			bottom: 5px
+		background-repeat: no-repeat
+		background-position: 160px 5px
+		+transition
 		a
 			display: block
 			height: 100%
 			width: 100%
-			text-align: center
+			text-align: left
+			padding:
+				top: 35px
+				left: 20px
+			font-size: 18px
+	#manage_users:hover, #manage_news:hover, #manage_comments:hover
+		background-position: 130px 5px
+		
+	#manage_users
+		background-image: url("/images/admin_icons/User.png")
+	
+	#manage_news
+		background-image: url("/images/admin_icons/News.png")
+		background-size: 50%
+	
+	#manage_comments
+		background-image: url("/images/admin_icons/Comments.png")
+		background-size: 50%
+		background-position: 180px 5px
+
+
+	#manage_products
+		background-image: url("/images/admin_icons/Products.png")
+		background-position: 160px 0px
+		background-size: 55%
+		
+	#manage_products:hover
+		background-position: 130px 0px
+
+
