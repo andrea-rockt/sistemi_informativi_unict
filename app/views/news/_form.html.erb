@@ -1,5 +1,5 @@
 <% content_for :head do
-		mark_it_up '#miu_test'
+		mark_it_up '#miu_area'
 end%>
 
 <%= form_for(@news) do |f| %>
@@ -16,12 +16,11 @@ end%>
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label t :title %><br />
     <%= f.text_field :title%>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body, :id=>"miu_test" %>
+    <%= f.text_area :body, :id=>"miu_area" %>
   </div>
 
   <div class="actions">

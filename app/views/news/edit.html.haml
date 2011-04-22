@@ -1,0 +1,7 @@
+%section#edit.news_section
+  %h1 News
+  = render 'form'
+  #links
+    = link_to 'Visualizza', @news
+    |
+    \#{link_to 'Indietro', news_index_path}

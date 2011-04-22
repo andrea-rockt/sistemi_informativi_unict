@@ -1,24 +1,25 @@
 %section#user_index
-	
-	-@users.each_with_index do |user,index|
-		-if (index%3) == 0
-			:plain
-				<div class="row"> 		
-		.user{:data =>{:user=>"#{user.user_name}"}, :style=> "background-image:url(#{user.avatar.url(:thumb)})"}
-			-link_to user do
-				%p
-					=user.email
-				%p
-					Username:
-					=user.user_name
-				%p
-					Admin:
-					=user.is_admin
-				-unless user.is_admin
-					%p
-						- link_to user, :class=> "delete_user" ,:confirm => "Sei sicuro di voler cancellare #{user.user_name}?", :method => :delete do
-							= image_tag "/images/editdelete.png"
+  %h1
+    Utenti
+  -@users.each_with_index do |user,index|
+    -if (index%3) == 0
+      :plain
+        <div class="row">     
+    .user{:data =>{:user=>"#{user.user_name}"}, :style=> "background-image:url(#{user.avatar.url(:thumb)})"}
+      -link_to user do
+        %p
+          =user.email
+        %p
+          Username:
+          =user.user_name
+        %p
+          Admin:
+          =user.is_admin
+        -unless user.is_admin
+          %p
+            - link_to user, :class=> "delete_user" ,:confirm => "Sei sicuro di voler cancellare #{user.user_name}?", :method => :delete do
+              = image_tag "/images/editdelete.png"
 
-		-if (index%3) == 2
-			:plain
-				</div>
+    -if (index%3) == 2
+      :plain
+        </div>

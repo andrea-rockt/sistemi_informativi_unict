@@ -198,6 +198,9 @@ it:
   	index:
   		title: "SnowCentral | Homepage"
   		news_header: "News"
+  news:
+  	edit:
+  		title: "Titolo:"
   		
   #devise internationalization  		
   users:

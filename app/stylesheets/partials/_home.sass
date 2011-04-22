@@ -1,113 +1,125 @@
 @import "compass/css3/box-shadow"
 #column1
-	+column(12)
-	+append(2)
-	//min-height: 800px
-	background-color: white
-	border: solid 1px #ccc
-	padding: 20px
-	padding-bottom: 300px
-	background-image: url("/images/home_1.jpg")
-	background-repeat: no-repeat
-	background-position: bottom left
-	img
-		border: solid 5px #ccc
-		margin-left: 20px
-		margin-bottom: 10px
-		+column(11, true)
-	img:hover
-		border: solid 5px black
-		
-	#contenuto  h1
-		font-size: 28px
-		font-weight: bold
-		padding-bottom: 3px
-		border-bottom: solid 1px #10a73f
-		
+  +column(12)
+  +append(2)
+  //min-height: 800px
+  background-color: white
+  border: solid 1px #ccc
+  padding: 20px
+  padding-bottom: 300px
+  background-image: url("/images/home_1.jpg")
+  background-repeat: no-repeat
+  background-position: bottom left
+  img
+    border: solid 5px #ccc
+    margin-left: 20px
+    margin-bottom: 10px
+    +column(11, true)
+  img:hover
+    border: solid 5px black
+    
+  #contenuto  h1
+    font-size: 28px
+    font-weight: bold
+    padding-bottom: 3px
+    border-bottom: solid 1px #10a73f
+    
 #column2
-	+column(9,true)
-	min-height: 500px
-	background-color: white
-	border: solid 1px #ccc
-	padding: 20px
+  +column(9,true)
+  min-height: 500px
+  background-color: white
+  border: solid 1px #ccc
+  padding: 20px
 
 #news_section > h1
-	font-size: 28px
-	font-weight: bold
-	padding-bottom: 3px
-	border-bottom: solid 1px #10a73f
-	margin-bottom: 30px
+  font-size: 28px
+  font-weight: bold
+  padding-bottom: 3px
+  border-bottom: solid 1px #10a73f
+  margin-bottom: 30px
 header .news > h1
-	font-size: 20px
-	font-weight: bold
-	color: #555
-	
+  font-size: 20px
+  font-weight: bold
+  color: #555
+  
 header .news p > span.data
-	color: #10a73f
-	margin-top: -8px
-	font-size: 10px
-	
+  color: #10a73f
+  margin-top: -8px
+  font-size: 10px
+  
 header .news p > span.author
-	+quiet
-	margin-top: -8px
-	font-size: 10px	
-	
+  +quiet
+  margin-top: -8px
+  font-size: 10px  
+  
 #admin_page
-	
-	background-color: white
-	border: solid 1px #ccc
-	padding:
-		top: 60px
-		bottom: 60px
-	
-	+column(20, true)
-	+prepend(3)
-	
-	#manage_users, #manage_news, #manage_products, #manage_comments
-		
-		//+box-shadow
-		+column(6)
-		overflow: hidden
-		height: 100px
-		background-color: white
-		border: solid 1px #ccc
-		margin:
-			top: 5px
-			bottom: 5px
-		background-repeat: no-repeat
-		background-position: 160px 5px
-		+transition
-		a
-			display: block
-			height: 100%
-			width: 100%
-			text-align: left
-			padding:
-				top: 35px
-				left: 20px
-			font-size: 18px
-	#manage_users:hover, #manage_news:hover, #manage_comments:hover
-		background-position: 130px 5px
-		
-	#manage_users
-		background-image: url("/images/admin_icons/User.png")
-	
-	#manage_news
-		background-image: url("/images/admin_icons/News.png")
-		background-size: 50%
-	
-	#manage_comments
-		background-image: url("/images/admin_icons/Comments.png")
-		background-size: 50%
-		background-position: 180px 5px
+  
+  background-color: white
+  border: solid 1px #ccc
+  padding:
+    top: 20px
+    bottom: 60px
+  
+  +column(22, true)
+  padding:
+    left: 30px
+    right: 30px
+    
+  #scelte
+    
+    +column(20,true)
+    +push(0)
+    margin-top: 30px
+  h1
+    font-size: 28px
+    font-weight: bold
+    padding-bottom: 3px
+    border-bottom: solid 1px #10A73F
+  #manage_users, #manage_news, #manage_products, #manage_comments
+    
+    //+box-shadow
+    +column(6)
+    overflow: hidden
+    height: 100px
+    background-color: white
+    border: solid 1px #ccc
+    margin:
+      top: 5px
+      bottom: 5px
+    background-repeat: no-repeat
+    background-position: 160px 5px
+    +transition
+    a
+      display: block
+      height: 100%
+      width: 100%
+      text-align: left
+      padding:
+        top: 35px
+        left: 20px
+      font-size: 18px
+  #manage_users:hover, #manage_news:hover, #manage_comments:hover
+    background-position: 130px 5px
+    
+  #manage_users
+    background-image: url("/images/admin_icons/User.png")
+  
+  #manage_news
+    background-image: url("/images/admin_icons/News.png")
+    background-size: 50%
+  
+  #manage_comments
+    background-image: url("/images/admin_icons/Comments.png")
+    background-size: 50%
+    background-position: 180px 5px
 
 
-	#manage_products
-		background-image: url("/images/admin_icons/Products.png")
-		background-position: 160px 5px
-		background-size: 50%
-		
-	#manage_products:hover
-		background-position: 130px 5px
+  #manage_products
+    background-image: url("/images/admin_icons/Products.png")
+    background-position: 160px 5px
+    background-size: 50%
+    
+  #manage_products:hover
+    background-position: 130px 5px
 
 

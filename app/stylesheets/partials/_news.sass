@@ -1,19 +1,43 @@
-#news_index_section
-	+column(22)
-	background-color: white
-	min-height: 200px
-	border: solid 1px #ccc
-	padding: 20px
-	table
-		tr
-			th:nth-child(1), td:nth-child(1)
-				
-				+span(4)
-			th:nth-child(2), td:nth-child(2)
-				+span(11)
-			th:nth-child(3), td:nth-child(3)
-				+span(2)
-			th:nth-child(4), td:nth-child(4)
-				+span(5)
-		tr:nth-child(even)
-			background-color: #eee	
+.news_section
+  +column(22)
+  background-color: white
+  min-height: 200px
+  border: solid 1px #ccc
+  padding: 20px
+  
+  h1
+    font-size: 28px
+    font-weight: bold
+    padding-bottom: 3px
+    border-bottom: solid 1px #10A73F
+  form
+    +blueprint-form
+    textarea
+      width: 676px
+#edit.news_section
+  #links
+    border-top: solid 1px #10A73F
+    margin-top: 10px
+    padding-top: 10px
+#show.news_section
+  #news_body
+    min-height: 100px
+    border-bottom: solid 1px #10A73F
+
+  #links
+    margin-top: 10px
+    
+#index.news_section
+  padding: 20px
+  table
+    tr
+      th:nth-child(1), td:nth-child(1)
+        +span(4)
+      th:nth-child(2), td:nth-child(2)
+        +span(11)
+      th:nth-child(3), td:nth-child(3)
+        +span(2)
+      th:nth-child(4), td:nth-child(4)
+        +span(5)
+    tr:nth-child(even)
+      background-color: #eee  

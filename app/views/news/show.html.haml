@@ -1,13 +1,18 @@
-%p#notice= notice
-%p
-  %b Title:
-  = @news.title
-%p
-  %b Body:
-  = @news.body
-%p
-  %b User:
-  = @news.user.user_name
-= link_to 'Edit', edit_news_path(@news)
-|
-\#{link_to 'Back', news_index_path}
+%section.news_section#show
+  %h1
+    = @news.title
+  %p
+    %strong
+      Publicato il:
+    = @news.created_at.to_formatted_s(:short)
+    %strong
+      Da:
+    = @news.user.user_name
+    
+  %div#news_body
+    = @news.body.html_safe
+  
+  %div#links
+    = link_to 'Edit', edit_news_path(@news)
+    |
+    =link_to 'Back', news_index_path

@@ -1,13 +1,16 @@
 #admin_page
-	#manage_users
-		- link_to :controller => :user, :action => :index do
-			= "Utenti"
-	#manage_news
-		- link_to :controller => :news, :action => :index do
-			= "News"
-	#manage_products
-		- link_to "#" do
-			= "Prodotti"
-	#manage_comments
-		- link_to "#" do
-			= "Commenti"
+  %h1
+    Amministrazione
+  %div#scelte
+    #manage_users
+      - link_to :controller => :user, :action => :index do
+        = "Utenti"
+    #manage_news
+      - link_to :controller => :news, :action => :index do
+        = "News"
+    #manage_products
+      - link_to "#" do
+        = "Prodotti"
+    #manage_comments
+      - link_to "#" do
+        = "Commenti"
