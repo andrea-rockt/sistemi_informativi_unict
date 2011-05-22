@@ -720,20 +720,25 @@ header .news > h1 {
 }
 
 /* line 45, ../../../app/stylesheets/partials/_home.sass */
-header .news p > span.data {
+.news p > span.data {
   color: #10a73f;
   margin-top: -8px;
   font-size: 10px;
 }
 
 /* line 50, ../../../app/stylesheets/partials/_home.sass */
-header .news p > span.author {
+.news p > span.author {
   color: #666666;
   margin-top: -8px;
   font-size: 10px;
 }
 
 /* line 55, ../../../app/stylesheets/partials/_home.sass */
+header#news_section div {
+  margin-bottom: 30px;
+}
+
+/* line 58, ../../../app/stylesheets/partials/_home.sass */
 #admin_page {
   background-color: white;
   border: solid 1px #cccccc;
@@ -750,7 +755,7 @@ header .news p > span.author {
 * html #admin_page {
   overflow-x: hidden;
 }
-/* line 68, ../../../app/stylesheets/partials/_home.sass */
+/* line 71, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #scelte {
   display: inline;
   float: left;
@@ -766,14 +771,14 @@ header .news p > span.author {
 * html #admin_page #scelte {
   overflow-x: hidden;
 }
-/* line 73, ../../../app/stylesheets/partials/_home.sass */
+/* line 76, ../../../app/stylesheets/partials/_home.sass */
 #admin_page h1 {
   font-size: 28px;
   font-weight: bold;
   padding-bottom: 3px;
   border-bottom: solid 1px #10a73f;
 }
-/* line 78, ../../../app/stylesheets/partials/_home.sass */
+/* line 81, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_users, #admin_page #manage_news, #admin_page #manage_products, #admin_page #manage_comments {
   display: inline;
   float: left;
@@ -800,7 +805,7 @@ header .news p > span.author {
 * html #admin_page #manage_users, * html #admin_page #manage_news, * html #admin_page #manage_products, * html #admin_page #manage_comments {
   overflow-x: hidden;
 }
-/* line 92, ../../../app/stylesheets/partials/_home.sass */
+/* line 95, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_users a, #admin_page #manage_news a, #admin_page #manage_products a, #admin_page #manage_comments a {
   display: block;
   height: 100%;
@@ -810,32 +815,32 @@ header .news p > span.author {
   padding-left: 20px;
   font-size: 18px;
 }
-/* line 101, ../../../app/stylesheets/partials/_home.sass */
+/* line 104, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_users:hover, #admin_page #manage_news:hover, #admin_page #manage_comments:hover {
   background-position: 130px 5px;
 }
-/* line 104, ../../../app/stylesheets/partials/_home.sass */
+/* line 107, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_users {
   background-image: url("/images/admin_icons/User.png");
 }
-/* line 107, ../../../app/stylesheets/partials/_home.sass */
+/* line 110, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_news {
   background-image: url("/images/admin_icons/News.png");
   background-size: 50%;
 }
-/* line 111, ../../../app/stylesheets/partials/_home.sass */
+/* line 114, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_comments {
   background-image: url("/images/admin_icons/Comments.png");
   background-size: 50%;
   background-position: 180px 5px;
 }
-/* line 117, ../../../app/stylesheets/partials/_home.sass */
+/* line 120, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_products {
   background-image: url("/images/admin_icons/Products.png");
   background-position: 160px 5px;
   background-size: 50%;
 }
-/* line 122, ../../../app/stylesheets/partials/_home.sass */
+/* line 125, ../../../app/stylesheets/partials/_home.sass */
 #admin_page #manage_products:hover {
   background-position: 130px 5px;
 }

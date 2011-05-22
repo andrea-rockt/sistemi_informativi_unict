@@ -1,39 +1,36 @@
 #column1
-	%section#contenuto
-		%header
-			%h1 Passione per lo Snowboard ?
-		%img{:src => "/images/home_3.jpg"}
-		%p
-			%strong
-				Sei nel posto giusto
-			
-			qui potrai trovare tutta l'attrezzatura necessaria a praticare
-			questo bellissimo sport.
-			%br/
-			Solo tecnologie all'avanguardia, materiali
-			di prima scelta e le migliori marche fanno parte del nostro catalogo
-			perciò cosa aspetti? comincia a navigare tra le nostre offerte oppure
-			consulta le date degli eventi nella sezione news
+  %section#contenuto
+    %header
+      %h1 Passione per lo Snowboard ?
+    %img{:src => "/images/home_3.jpg"}
+    %p
+      %strong
+        Sei nel posto giusto
+      
+      qui potrai trovare tutta l'attrezzatura necessaria a praticare
+      questo bellissimo sport.
+      %br/
+      Solo tecnologie all'avanguardia, materiali
+      di prima scelta e le migliori marche fanno parte del nostro catalogo
+      perciò cosa aspetti? comincia a navigare tra le nostre offerte oppure
+      consulta le date degli eventi nella sezione news
 #column2
-	%section#news
-		%header#news_section
-			%h1
-				=t 'news_header'
-			-for n in @news do
-				%article.news
-					%header.news
-						%h1
-							=n.title
-						%p
-							%span.data
-								Pubblicato il:
-								=n.created_at.to_formatted_s :short
-							%span.author
-								Da:
-								=n.user.user_name
-							
-							
-					%p
-						=n.body.html_safe
-			
-		
+  %section#news
+    %header#news_section
+      %h1
+        News
+      -for n in @news do
+        %article.news
+          %h1
+            =n.title
+          %p
+            %span.data
+              Pubblicato il:
+              =n.created_at.to_formatted_s :short
+            %span.author
+              Da:
+              =n.user.user_name
+          %div 
+            =n.body.html_safe
+    
+  
