@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 		@news = News.all.reverse
 		respond_to do |type|
 			type.html
-      type.mobile { render :layout => "mobile"} 
+            type.mobile { render :layout => "mobile", :action=>"index.haml" } 
 		end
 	end
 	

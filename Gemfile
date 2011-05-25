@@ -13,7 +13,7 @@ gem 'paperclip'
 gem 'mongrel'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'rails3-jquery-autocomplete'
-
+#gem 'mobile-fu'
 #gem 'jeditable-rails'
 gem "jeditable-rails", :git => "git://github.com/afeld/jeditable-rails.git", :branch => "callback"
 gem "mark_it_up", :git => "git://github.com/cingel/mark_it_up.git"

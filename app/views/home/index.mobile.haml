@@ -1,0 +1,71 @@
+%div{:data =>{:role=>"page"},:id=>"home"}
+  %div{:data => {:role => "header"}}
+    %h1 
+      Snow Central
+    %div{:data =>{:role=>"navbar"}}
+      %ul
+        %li
+          %a.ui-btn-active{:href => "#home",:data=>{:icon => "home"}}
+            Home
+        %li
+          %a{:href => "#news"}
+            News
+  
+  %div{:data => {:role => "content"}}
+    %section#contenuto
+      %header
+        %h1 Passione per lo Snowboard ?
+      %img{:src => "/images/home_3.jpg", :width => "100%"}
+      %p
+        %strong
+        Sei nel posto giusto
+        qui potrai trovare tutta l'attrezzatura necessaria a praticare
+        questo bellissimo sport.
+        %br/
+        Solo tecnologie all'avanguardia, materiali
+        di prima scelta e le migliori marche fanno parte del nostro catalogo
+        perciò cosa aspetti? comincia a navigare tra le nostre offerte oppure
+        consulta le date degli eventi nella sezione news
+
+%div{:data =>{:role=>"page"}, :id => "news"}
+
+  %div{:data => {:role => "header"}}
+    %h1 
+      Snow Central
+    %div{:data =>{:role=>"navbar"}}
+      %ul
+        %li
+          %a.ui-btn-active{:href => "#home",:data=>{:icon => "home"}}
+            Home
+        %li
+          %a.ui-btn-active{:href => "#news"}
+            News
+  %div{:data => {:role => "content"}}
+    %ul{:data => {:role => "listview"}}
+      -for n in @news do
+        %li.news
+       
+          %h2
+            =n.title  
+          %p
+            %span.data
+              Pubblicato il:
+              =n.created_at.to_formatted_s :short
+            %span.author
+              Da:
+              =n.user.user_name
+          %ul{:data => {:role => "listview"}}
+            %li
+              %h2
+                =n.title  
+              %p
+                %span.data
+                  Pubblicato il:
+                  =n.created_at.to_formatted_s :short
+                %span.author
+                  Da:
+                  =n.user.user_name
+                %div
+                  =n.body.html_safe
+
+            
