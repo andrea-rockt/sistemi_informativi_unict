@@ -1,0 +1,11 @@
+!!! 5
+%head
+    %title MOBILE SNOW CENTRAL
+    = stylesheet_link_tag "http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css"
+    = stylesheet_link_tag "compiled/mobile"
+    = javascript_include_tag :defaults
+    = javascript_include_tag "http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"
+    = csrf_meta_tag
+%body
+    = yield    
+

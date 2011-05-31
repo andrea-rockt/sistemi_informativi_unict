@@ -1,0 +1,26 @@
+%div{:data =>{:role=>"page"},:id=>"home"}
+  %div{:data => {:role => "header"}}
+    %h1 
+      Snow Central
+    
+  #sign_in{:data => {:role => "content"}}
+    #sign_in_form
+      %h2 
+        =t :sign_in_title
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| 
+        %div{:data => {:role => "fieldcontain"}}
+          = f.label :login
+          %br/
+          = f.text_field :login, :placeholder => "email@domain.com | nome utente" 
+        %div{:data => {:role => "fieldcontain"}}
+          = f.label :password 
+          %br/
+          = f.password_field :password, :placeholder => "Password"
+        - if devise_mapping.rememberable?
+          %p
+            = f.check_box :remember_me
+            = f.label :remember_me 
+        %p
+          = f.submit "Log in" 
+      
+      = render :partial => "devise/shared/links" 

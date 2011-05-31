@@ -1,0 +1,14 @@
+%div{:data =>{:role=>"navbar"}}
+  %ul
+    %li
+      %a{:href => "#home",:data=>{:icon => "home"}}
+        Home
+    %li
+      %a{:href => "#news",:data=>{:icon => "snowcentral-news"}}
+        News
+    %li
+      -unless current_user
+        =link_to "Login", {:controller => "devise/sessions", :action=>"new"},{"data-rel"=>"dialog","data-icon"=>"snowcentral-user"}
+      -else
+        =link_to "Logout", {:controller => "devise/sessions", :action=>"destroy"},{"data-ajax"=>"false","data-icon"=>"delete"}
+        

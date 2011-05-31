@@ -1,0 +1,21 @@
+/* line 3, ../../../app/stylesheets/mobile.scss */
+.ui-icon-snowcentral-news {
+  background-image: url("/images/icons/news.png");
+}
+
+/* line 7, ../../../app/stylesheets/mobile.scss */
+.ui-icon-snowcentral-user {
+  background-image: url("/images/icons/user.png");
+}
+
+/* line 11, ../../../app/stylesheets/mobile.scss */
+img {
+  width: 100%;
+  border: solid 1px #ccc;
+}
+
+/* line 16, ../../../app/stylesheets/mobile.scss */
+div[data-role="content"] h1 {
+  font-size: 1.5em;
+  text-shadow: #bbbbbb 0px 0px 5px;
+}

@@ -2,20 +2,13 @@
   %div{:data => {:role => "header"}}
     %h1 
       Snow Central
-    %div{:data =>{:role=>"navbar"}}
-      %ul
-        %li
-          %a.ui-btn-active{:href => "#home",:data=>{:icon => "home"}}
-            Home
-        %li
-          %a{:href => "#news"}
-            News
+    =render "mobile_nav"
   
   %div{:data => {:role => "content"}}
     %section#contenuto
       %header
         %h1 Passione per lo Snowboard ?
-      %img{:src => "/images/home_3.jpg", :width => "100%"}
+      %img{:src => "/images/home_3.jpg"}
       %p
         %strong
         Sei nel posto giusto
@@ -32,14 +25,7 @@
   %div{:data => {:role => "header"}}
     %h1 
       Snow Central
-    %div{:data =>{:role=>"navbar"}}
-      %ul
-        %li
-          %a.ui-btn-active{:href => "#home",:data=>{:icon => "home"}}
-            Home
-        %li
-          %a.ui-btn-active{:href => "#news"}
-            News
+    =render "mobile_nav"
   %div{:data => {:role => "content"}}
     %ul{:data => {:role => "listview"}}
       -for n in @news do

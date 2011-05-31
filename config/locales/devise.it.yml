@@ -1,4 +1,5 @@
 it:
+  remember_me: "Ricordami"
   errors:
     messages:
       not_found: "non trovato"
