@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @store.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @store.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @store.city %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @store.country %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @store.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @store.longitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @store.gmaps %>
+</p>
+
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>

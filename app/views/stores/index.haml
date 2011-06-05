@@ -1,0 +1,22 @@
+%section.stores_section#show
+  %h1
+    Negozi
+  %p
+    Qui potrete ritirare i nostri prodotti od ottenere assistenza e supporto dal nostro personale
+  %p
+    %strong Effettua il login
+    per ricevere consigli sui 
+    %strong negozi più vicini alla tua abitazione
+
+  / crea la div necessaria all'inserimento della mappa 
+  /
+    =gmaps4rails(@json)
+  
+  %ul#markers_list
+  
+  =gmaps("markers" => {"data" => @json, "options" => {"list_container" => "markers_list" }},"map_options"=>{"auto_adjust"=>true})
+  / Lista che conterrà i markers
+
+  
+
+

@@ -1,0 +1,39 @@
+%div#search_form
+  =form_for @search, :url => products_path, :html => {:method => :get} do |f|
+    = f.label :model_contains, "Modello:"
+    %br 
+    = f.text_field :model_contains
+    %br
+    = f.label :description_contains, 'Descrizione:'
+    %br
+    = f.text_field :description_contains
+    %br
+    %table
+      %tr
+        %td
+          - choices = @categories.collect{|category| category.name}
+          - choices= choices.zip choices
+          = f.checks(:category_name_in, choices, :class => 'checkboxes') do |check|          
+            = check.box
+            = check.label
+            %br
+        %td
+          - choices = @brands.collect{|brand| brand.name}
+          - choices = choices.zip choices
+          = f.checks(:brand_name_in, choices, :class => 'checkboxes') do |check|          
+            = check.box
+            = check.label
+            %br
+          
+    = f.submit 'Cerca', :class => "submit_button"
+    %br
+    %br
+    %p
+      Ordina per:
+      = sort_link @search, :price, "Prezzo"
+      \-
+      = sort_link @search, :model, "Modello"
+      \-
+      = sort_link @search, :brand_name, "Marca"
+
+    

@@ -10,7 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110420225015) do
+ActiveRecord::Schema.define(:version => 20110605134547) do
+
+  create_table "brands", :force => true do |t|
+    t.string   "name"
+    t.string   "website"
+    t.string   "nationality"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cities", :force => true do |t|
     t.string "name"
@@ -22,6 +40,37 @@ ActiveRecord::Schema.define(:version => 20110420225015) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "model"
+    t.integer  "price"
+    t.string   "quantity"
+    t.string   "size"
+    t.integer  "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "description"
+    t.integer  "category_id"
+    t.integer  "brand_id"
+  end
+
+  create_table "stores", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "country"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "lat"
+    t.float    "lng"
   end
 
   create_table "users", :force => true do |t|

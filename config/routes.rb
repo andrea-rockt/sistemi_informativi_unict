@@ -1,4 +1,10 @@
 SistemiInformativiUnict::Application.routes.draw do
+  resources :stores
+
+  resources :brands
+
+  resources :products
+
   match "mark_it_up/preview" => "mark_it_up#preview"
 
   devise_for :users

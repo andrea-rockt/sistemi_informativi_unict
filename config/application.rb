@@ -48,8 +48,8 @@ module SistemiInformativiUnict
       require "extensions/masked_input_field"
     end
     
-    config.generators do |g|
-      g.template_engine :haml
-    end
+    #config.generators do |g|
+     # g.template_engine :haml
+    #end
   end
 end

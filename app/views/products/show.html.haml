@@ -1,0 +1,30 @@
+%section.products_section#show
+  %h1
+    %span#brand
+      =@product.brand.name.capitalize
+    %span#model
+      =@product.model
+  
+  #col_left
+  
+    %p
+      = @product.description.gsub(".",".\n").gsub("\n","<br/>").gsub(" – ",",").html_safe
+    %p
+      %b Quantity:
+      = @product.quantity 
+    %p
+      %b Size:
+      = @product.size.join(",") 
+    %p
+      %b Categoria:
+      = @product.category.name 
+    %p
+      %b Year:
+      = @product.year 
+    = link_to 'Edit', edit_product_path(@product)  |
+    = link_to 'Back', products_path 
+  #col_right
+    =image_tag @product.image.url(:medium)
+    %p#price
+      = (parse_price @product.price).to_s + "€" 
+ 

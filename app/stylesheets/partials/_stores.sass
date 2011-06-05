@@ -1,0 +1,31 @@
+.stores_section
+  +column(22)
+  background-color: white
+  min-height: 200px
+  border: solid 1px #ccc
+  padding: 20px
+  
+  h1
+    font-size: 28px
+    font-weight: bold
+    padding-bottom: 3px
+    border-bottom: solid 1px #10A73F
+  form
+    +blueprint-form
+    textarea
+      width: 676px
+
+.suggested
+  color: red
+  border-bottom: solid 1px red
+  
+.suggested:after
+  content: "(Il più vicino)"
+#gmaps4rails_map
+  +box-shadow
+  width: 600px !important
+  +column(20)
+#markers_list
+  +column(5)
+  a
+    text-decoration: none

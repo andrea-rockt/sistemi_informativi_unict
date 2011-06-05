@@ -5,18 +5,21 @@ gem 'rails', '3.0.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem "meta_search" 
 gem 'sqlite3'
 gem 'compass'
 gem 'haml'
 gem 'devise'
 gem 'paperclip'
-gem 'mongrel'
+gem 'mongrel', '~> 1.2.0.pre2'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'rails3-jquery-autocomplete'
-#gem 'mobile-fu'
+gem 'rake', '~> 0.8.7'
+gem 'yaml_db'
 #gem 'jeditable-rails'
 gem "jeditable-rails", :git => "git://github.com/afeld/jeditable-rails.git", :branch => "callback"
 gem "mark_it_up", :git => "git://github.com/cingel/mark_it_up.git"
+gem "gmaps4rails"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"  #Imposto l'utilizzo di rspec '

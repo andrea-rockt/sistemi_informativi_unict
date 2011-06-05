@@ -30,7 +30,10 @@
 						<a href="<%= root_path %>">HOME</a>
 					</li>
 					<li>
-						<a href="#">PRODOTTI</a>
+						<%= link_to "PRODOTTI", products_path%>
+					</li>
+					<li>
+						<%= link_to "NEGOZI", stores_path%>
 					</li>
 					
 					<li id="right_aligned_li">
@@ -67,6 +70,7 @@
 		
 		<footer id="pages_footer">
 			<hr>
+			<%= yield :scripts %>
 			<!--<div id="features_container">
 				<div class="rotate">Using Rails</div>
 			</div>

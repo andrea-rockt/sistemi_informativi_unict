@@ -21,6 +21,21 @@ $(document).ready( function() {
 	//$("#")
 	resize_snowboarder()
 	
+	
+	$('#toggle_search').live('click',function(){
+		alert("turi")
+		search_form=$('#search_form')
+		if (search_form.attr('visible')=='true'){
+			search_form.animate({'top': '-350px'})
+			search_form.attr('visible','false')
+		}else if(search_form.attr('visible')=='false') {
+			search_form.animate({'top': '164px'})
+			search_form.attr('visible','true')
+		}else{
+			search_form.animate({'top': '164px'})
+			search_form.attr('visible','true')
+		}
+	});
 	/*$('input[name="user[height]"]').live('focus',function(){
 		$(this).mask("9.99");
 	})*/
@@ -36,6 +51,7 @@ $(document).ready( function() {
 			$('#form_avatar_upload').css({'display':'none'});
 		}
 	})
+	
 	
 	
 	//$("#flashes:has(#flash)").fadeOut(1000);

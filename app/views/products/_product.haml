@@ -1,0 +1,27 @@
+
+%div{:class => last ? "product product_last":"product"}
+  %p.product_brand
+    =image_tag product.brand.logo.url(:logo)
+  %a{:href=> url_for(product)} 
+    = image_tag product.image.url(:medium), :class => "product_image"
+  %div.product_details
+    %table
+      %tr
+        %td.product_model_year
+          %span.product_model
+            %a{:href=> url_for(product)}
+              =product.model
+          %span.product_year
+            =product.year
+        %td.product_price       
+          %span
+            =parse_price product.price
+            \ €
+    %div.product_description
+      =ellipsis product.description
+
+    %p
+      %span.product_size
+        Misure disponibili (Quantità):
+      =product.size.zip(product.quantity).collect{|element| "#{element[0]}(#{element[1]})"}.join(", ")
+

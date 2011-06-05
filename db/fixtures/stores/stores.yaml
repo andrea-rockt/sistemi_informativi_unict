@@ -1,0 +1,55 @@
+---
+- name: "KAHUNA snowboard shop"
+  address: "Via Ludovico Micara, 20"
+  city: "Roma"
+  country: "Italy"
+  
+- name: "Bretelle Megastore"
+  address: "Via Regina Margherita, 25"
+  city: "Santa Teresa di Riva (ME)"
+  country: "Italy"
+  
+- name: "Vert Shop"
+  address: "Corso G.Nicotera, 201"
+  city: "Lamezia Terme, Catanzaro"
+  country: "Italy"
+  
+- name: "Bassa Pressione Surf"
+  address: "Via Verdi, 17"
+  city: "Livorno"
+  country: "Italy"
+  
+- name: "Kanaka"
+  address: "Via S.Orsola, 18"
+  city: "Bergamo"
+  country: "Italy"
+  
+- name: "Contest Board Shop"
+  address: "Via Anguissola, 31"
+  city: "Milano"
+  country: "Italy"
+  
+- name: "Back Door"
+  address: "Via Rossini, 112"
+  city: "Torino"
+  country: "Italy"
+  
+- name: "Easy Rider Snowboard Shop"
+  address: "Via Carrel Jean Antoine, 9"
+  city: "Valtournenche (AO) "
+  country: "Italy"
+  
+- name: "Beat"
+  address: "Via Rittamyer, 6/A"
+  city: "Trieste"
+  country: "Italy"
+  
+- name: "100-One Freride Shop"
+  address: "Via Rosmini, 10"
+  city: "Trento"
+  country: "Italy"
+  
+- name: "Extreme"
+  address: "Via Sciuti, 73"
+  city: "Palermo"
+  country: "Italy"

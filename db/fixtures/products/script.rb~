@@ -1,0 +1,102 @@
+require "yaml"
+
+paths=[]
+prodotti={}
+
+Dir["*"].each  do |dir|
+    if File.directory?(dir) && dir != "." && dir != ".."
+        prodotti.store(dir,{})
+    end
+end
+
+Dir["*/*/*"].each  do |dir|
+        paths=paths << dir 
+end
+
+paths.each do |path|
+
+    tipo,marca,modello=path.split("/")
+
+    descrizione=""
+    image=Dir["#{path}/*.{jpg,png,jpeg}"][0]
+
+    File.open(Dir["#{path}/*.txt"][0], "r") do |infile|
+      while (line = infile.gets)
+          descrizione = descrizione + line
+      end
+    end
+
+    prodotti[tipo][marca]={} if prodotti[tipo][marca].nil?
+
+    if tipo=="tavole"
+        prezzo = (200 + rand(500))*100
+        size = (1..5).collect{
+            (150 + rand(15)).to_s
+        }
+        size=size.uniq.compact
+        quantity = (1..size.length).collect do
+            (1 + rand(10)).to_s
+        end 
+    elsif tipo=="scarponi"
+        prezzo = (50 + rand(300))*100
+
+        taglie =["s","m","l","xl"]
+        size=taglie.sample(1+rand(3))
+        quantity = (1..size.length).collect do
+            (1 + rand(10)).to_s
+        end 
+    elsif tipo=="attacchi"
+        prezzo = (50 + rand(200))*100
+        taglie =["s","m","l","xl"]
+        size=taglie.sample(1+rand(3))
+        quantity = (1..size.length).collect do
+            (1 + rand(10)).to_s
+        end 
+    end
+
+    prodotti[tipo][marca][modello]={
+        :descrizione=>descrizione,
+        :image=>image,
+        :price=>prezzo,
+        :size=>size,
+        :quantity=>quantity,
+        :year=>2011,
+        :image=>image
+    }
+
+end
+
+
+records=[]
+
+    
+    prodotti.each{|tipologia,oggetti|
+        oggetti.each{ |marca,tavole|
+            record_tavole = tavole.collect{ |nome,specifiche|
+                [nome.gsub("_"," ").capitalize,specifiche[:price],specifiche[:quantity].to_yaml,specifiche[:size].to_yaml,specifiche[:year],"2011-05-31 10:30:13.177420",
+                    "2011-05-31 10:30:13.177420",nil,nil,nil,nil,specifiche[:descrizione]]
+            }
+            records=records.concat(record_tavole)
+        }
+
+    }
+
+
+tmp=[]
+records.each_with_index{|record,index|
+      tmp << (record.insert(0,index+1))
+}
+
+#print tmp.to_yaml
+
+tmp1={}
+
+prodotti.each{ |tipologia,oggetti|
+  oggetti.each{ |marca,tavole|
+    tavole.each{ |nome,specifiche|
+      tmp1.store(nome,specifiche[:image])    
+    }
+  }
+}
+
+print tmp1.to_yaml

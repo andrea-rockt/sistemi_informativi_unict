@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
     protect_from_forgery
 
     #has_mobile_fu(true)
-    has_mobile_fu(true)
+    has_mobile_fu
     def require_admin!
       authenticate_user!
       logger.debug "ApplicationController::require_admin!"
